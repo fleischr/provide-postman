@@ -940,7 +940,7 @@
 					"        raw: JSON.stringify({ email: pm.environment.get(\"email\"), password: pm.environment.get(\"password\") })",
 					"    }",
 					"}, function (err, res) {",
-					"   pm.environment.set(\"jwt_token\", res.json().token.token)",
+					"   pm.environment.set(\"jwt_token\", res.json().token.access_token)",
 					"});"
 				]
 			}

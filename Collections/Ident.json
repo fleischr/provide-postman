@@ -611,7 +611,7 @@
 								"exec": [
 									"const response = pm.response.json();",
 									"",
-									"pm.environment.set(\"jwt_token\", response.token.token), (\"user_id\", response.user.id);",
+									"pm.environment.set(\"jwt_token\", response.token.access_token), (\"user_id\", response.user.id);",
 									"",
 									""
 								],
@@ -870,7 +870,7 @@
 					"        raw: JSON.stringify({ email: pm.environment.get(\"email\"), password: pm.environment.get(\"password\") })",
 					"    }",
 					"}, function (err, res) {",
-					"   pm.environment.set(\"jwt_token\", res.json().token.token)",
+					"   pm.environment.set(\"jwt_token\", res.json().token.access_token)",
 					"});"
 				]
 			}
